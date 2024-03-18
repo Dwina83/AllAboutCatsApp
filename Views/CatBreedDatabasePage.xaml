@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AllAboutCatsApp.Views.CatBreedDatabasePage"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="Watercolor 1.jpg">
+
+    <ScrollView>
+    <VerticalStackLayout>
+        <ListView ItemsSource="{Binding Breeds}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                            <StackLayout Padding="10" BackgroundColor="Wheat">
+                                
+                                <Image Source="{Binding image.url}" WidthRequest="500" HeightRequest="500" VerticalOptions="Start" HorizontalOptions="Start"/>
+                                <Label Text="{Binding name}" FontSize="14" FontAttributes="Bold"/>
+                                <Label Text="{Binding width, StringFormat='Width: {0}'}" FontSize="12" />
+                                <Label Text="{Binding height, StringFormat='Height: {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding origin, StringFormat='Origin: {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding temperament, StringFormat='Temperament: {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding description, StringFormat='Description: {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding life_span, StringFormat='Life span: {0} years'}" FontSize="12" VerticalOptions="Start"/>
+                                <Label Text="{Binding wikipedia_url, StringFormat='Wikipedia: {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding IndorRating, StringFormat='Indor  {0}'}" FontSize="12" VerticalOptions="Start"/>
+                                <Label Text="{Binding LapRating, StringFormat='Lap  {0}'}" FontSize="12" VerticalOptions="Start"/>
+                                <Label Text="{Binding AdaptabilityRating, StringFormat='Adaptability {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding AffectionLevelRating, StringFormat='Affection level {0}kg'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding ChildFriendlyRating, StringFormat='Child friendly {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding DogFriendlyRating, StringFormat='Dog friendly {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding CatFriendlyRating, StringFormat='Cat friendly {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding StrangerFriendlyRating, StringFormat='Stranger friendly {0} years'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding EnergyLevelRating, StringFormat='Energy level {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding GroomingRating, StringFormat='Grooming {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding HealthIssuesRating, StringFormat='Health issues {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding IntelligenceRating, StringFormat='Intelligence {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding SheddingLevelRating, StringFormat='Shedding level {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding SocialNeedsRating, StringFormat='Social needs {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding VocalisationRating, StringFormat='Vocalisation {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding ExperimentalRating, StringFormat='Experimental {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding HairlessRating, StringFormat='Hairless {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding NaturalRating, StringFormat='Natural {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding RareRating, StringFormat='Rare {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding SuppressedTailRating, StringFormat='Supressed tail {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding ShortLegsRating, StringFormat='Short legs {0}'}" FontSize="12" VerticalOptions="Start" />
+                                <Label Text="{Binding HypoallergeniclRating, StringFormat='Hypoallergenic {0}'}" FontSize="12" VerticalOptions="Start" />
+                            </StackLayout>
+                           
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+            <Button
+               x:Name="HomeButton"
+               Text="Home" 
+               SemanticProperties.Hint="Back to main page"
+               Clicked="OnClickedHomeButton"
+               HorizontalOptions="Center"
+             BackgroundColor="MediumPurple"></Button>   
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

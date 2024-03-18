@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AllAboutCatsApp.Views.SignUpPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="Watercolor 1.jpg"
+             >
+    <ScrollView>
+    <VerticalStackLayout>
+            <Label
+                 x:Name="SignUp"
+                 Text="Sign up"
+                 Style="{StaticResource Headline}"
+                 VerticalOptions="Center"
+                 HorizontalOptions="Center"
+                 BackgroundColor="Gold"></Label>                
+
+            <Frame>
+            <Grid ColumnDefinitions="25,*">
+                <Image Source="user.png" HeightRequest="25" WidthRequest="25"/>
+                    <Entry
+                         x:Name="FullnameSignUpEntry"
+                         Placeholder="Fullname"
+                         Grid.Column="1"
+                         VerticalOptions="StartAndExpand"
+                         HorizontalOptions="StartAndExpand"></Entry>    
+                </Grid>
+
+            </Frame>
+
+            <Frame>
+                <Grid ColumnDefinitions="25,*">
+                <Image Source="email.png" HeightRequest="25" WidthRequest="25"/>
+                    <Entry
+                         x:Name="EmailSignUpEntry"
+                         Placeholder="Email"
+                         Grid.Column="1"        
+                         VerticalOptions="StartAndExpand"
+                         HorizontalOptions="StartAndExpand"></Entry>    
+                </Grid>
+        </Frame>
+
+        <Frame>
+            <Grid ColumnDefinitions="25,*">
+                <Image Source="password.png" HeightRequest="25" WidthRequest="25"/>
+                    <Entry
+                         x:Name="PasswordSignUpEntry"
+                         Placeholder="Password"
+                         Grid.Column="1"        
+                         VerticalOptions="StartAndExpand"
+                         HorizontalOptions="StartAndExpand"></Entry>            
+                </Grid>
+        </Frame>
+
+        <Button
+            x:Name="SaveRegisterButton"
+            Text="Sign Up" 
+            SemanticProperties.Hint="Register user and save it to MongoDb"
+            Clicked="OnClickedSignUp"
+            HorizontalOptions="Start"
+            BackgroundColor="DeepPink"  ></Button>
+
+
+
+        <Button
+               x:Name="HomeButton"
+               Text="Home" 
+               SemanticProperties.Hint="Back to main page"
+               Clicked="OnClickedHomeButton"
+               HorizontalOptions="Center"></Button>
+
+        <Grid ColumnDefinitions="25,*">
+
+            <Image Source="PurpleOrange.png"
+            VerticalOptions="EndAndExpand"
+            HorizontalOptions="StartAndExpand"
+            Grid.Column="0"
+            Margin="0,0,0,-100"
+            HeightRequest="250"
+            WidthRequest="250"/>
+
+                <Image Source="PurpleOrange.png"
+             VerticalOptions="StartAndExpand"
+             HorizontalOptions="EndAndExpand"
+             Grid.Column="1"
+             Margin="0,0,0,-50"
+             HeightRequest="250"
+             WidthRequest="250"/>
+            </Grid>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

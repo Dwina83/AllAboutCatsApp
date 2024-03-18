@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AllAboutCatsApp.Views.UserLoggedIn"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="Watercolor 1.jpg">
+    <VerticalStackLayout>
+        <Button
+       x:Name="BreedsButton"
+       Text="Search Breeds" 
+       SemanticProperties.Hint="Fetching breeds from API"
+       Clicked="OnClickedCatBreeds"
+       HorizontalOptions="Center"></Button>
+
+        <Button
+       x:Name="ImageButton"
+       Text="Search Image" 
+       SemanticProperties.Hint="Fetching image from API"
+       Clicked="OnClickedCatImage"
+       HorizontalOptions="Center"></Button>
+    </VerticalStackLayout>
+</ContentPage>

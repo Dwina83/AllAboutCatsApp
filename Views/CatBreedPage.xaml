@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AllAboutCatsApp.Views.CatBreedPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="Watercolor 1.jpg">
+    <ScrollView>
+    <VerticalStackLayout Padding="30,0"
+                         Spacing="25">
+        <Label 
+            Text="List of cat breeds"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start"
+            BackgroundColor="Gold"
+            FontSize="Large"/>
+
+            <ListView ItemsSource="{Binding TheBreeds}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid 
+                                  Padding="5"
+                                  RowDefinitions="20,*"
+                                  ColumnDefinitions="20,200,*"
+                                  ColumnSpacing="10"
+                                  >
+                                
+                                <Label Grid.Column="0" Grid.Row="0" Text="&#x2605;" FontSize="12"></Label>
+                                <Label Grid.Column="1" Grid.Row="0" Text="{Binding name}" FontSize="12"></Label>
+                                <Label Grid.Column="2" Grid.Row="0" Text="{Binding id}" FontSize="12"></Label>
+                                
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Entry
+                Placeholder="Search breeds"
+                x:Name="Entrybreed"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                BackgroundColor="Wheat">
+            </Entry>
+            <Button
+                Text="Search"
+                Clicked="OnSearchButtonClicked"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                BackgroundColor="DeepPink"></Button>
+            <Button
+                  x:Name="HomeButton"
+                  Text="Home" 
+                  SemanticProperties.Hint="Back to main page"
+                  Clicked="OnClickedHomeButton"
+                  HorizontalOptions="Center"
+                BackgroundColor="MediumPurple"></Button>
+
+            <Grid ColumnDefinitions="25,*">
+
+                <Image Source="PurpleOrange.png"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="StartAndExpand"
+                    Grid.Column="0"
+                    Margin="0,0,0,-100"
+                    HeightRequest="250"
+                    WidthRequest="250"/>    
+
+                <Image Source="PurpleOrange.png"
+                     VerticalOptions="StartAndExpand"
+                     HorizontalOptions="EndAndExpand"
+                     Grid.Column="1"
+                     Margin="0,0,0,-50"
+                     HeightRequest="250"
+                     WidthRequest="250"/>   
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

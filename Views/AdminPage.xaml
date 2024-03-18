@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AllAboutCatsApp.Views.AdminPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="Watercolor 1.jpg">
+    
+        <VerticalStackLayout
+       Padding="50"
+        Spacing=" 10">
+       
+        <Button
+          x:Name="DownloadDatabaseButton"
+          Text="Download Breeds Database" 
+          SemanticProperties.Hint="Fetching database from Db"
+          Clicked="OnClickedDownloadDatabaseCatBreeds"
+          HorizontalOptions="Center" 
+          BackgroundColor="DeepPink"/>
+
+        <Label
+            Text="{Binding ExceptionMessage}"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"></Label>
+
+        <Button
+          x:Name="ViewDatabaseButton"
+          Text="View Database" 
+          SemanticProperties.Hint="Showing database fetched from Db"
+          Clicked="OnClickedViewDatabaseCatBreeds"
+          HorizontalOptions="Center" 
+          BackgroundColor="DeepPink"/>
+
+        <Button
+               x:Name="HomeButton"
+               Text="Home" 
+               SemanticProperties.Hint="Back to main page"
+               Clicked="OnClickedHomeButton"
+               HorizontalOptions="Center"
+               BackgroundColor="MediumPurple"></Button>
+
+
+
+        <Grid ColumnDefinitions="25,*">
+
+                <Image Source="BlackCat.png"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="StartAndExpand"
+                    Grid.Column="0"
+                    Margin="-150,0,0,100"
+                    HeightRequest="250"
+                    WidthRequest="250"/>
+
+                <Image Source="BlackCat.png"
+                     VerticalOptions="StartAndExpand"
+                     HorizontalOptions="EndAndExpand"
+                     Grid.Column="1"
+                     Margin="0,0,0,250"
+                     HeightRequest="250"
+                     WidthRequest="250"/>
+            </Grid>
+        </VerticalStackLayout>
+    
+</ContentPage>

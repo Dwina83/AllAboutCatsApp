@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AllAboutCatsApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:AllAboutCatsApp"
+    xmlns:Views="clr-namespace:AllAboutCatsApp.Views"
+    Shell.FlyoutBehavior="Flyout"
+    >
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <!--<ShellContent
+        Title="Loading"
+        ContentTemplate="{DataTemplate Views:LoadingPage}"
+        Route="LoadingPage" />
+    <ShellContent
+        Title="Sign In"
+        ContentTemplate="{DataTemplate Views:SignInPage}"
+        Route="SignInPage"
+        Shell.FlyoutBehavior="Disabled"/>
+    <ShellContent
+        Title="Sign Up"
+        ContentTemplate="{DataTemplate Views:SignUpPage}"
+        Route="SignUpPage" />-->
+    <ShellContent
+        Title="Cat Facts"
+        ContentTemplate="{DataTemplate Views:CatFactsPage}"
+        Route="CatFactsPage" />
+    <ShellContent
+        Title="Cat Breeds"
+        ContentTemplate="{DataTemplate Views:CatBreedPage}"
+        Route="CatBreedPage" />
+    <ShellContent
+        Title="Cat Images"
+        ContentTemplate="{DataTemplate Views:CatImagePage}"
+        Route="CatImagePage" />
+    <!--<ShellContent
+        Title="Admin"
+        ContentTemplate="{DataTemplate Views:AdminPage}"
+        Route="AdminPage" />-->
+    <ShellContent
+        Title="Database"
+        ContentTemplate="{DataTemplate Views:CatBreedDatabasePage}"
+        Route="CatBreedDatabasePage" />
+
+</Shell>

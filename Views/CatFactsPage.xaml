@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AllAboutCatsApp.Views.CatFactsPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="Watercolor 1.jpg">
+    <ScrollView>
+    <VerticalStackLayout>
+        <Label 
+            Text="Do you know?"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="Large"
+            BackgroundColor="Goldenrod"/>
+
+        <ListView ItemsSource="{Binding TheFact}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="25"
+                              RowDefinitions="Auto">
+                            <Label Text="{Binding text}"
+                                   FontSize="24">
+                            </Label>
+                            
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+            <Button
+               x:Name="HomeButton"
+               Text="Home" 
+               SemanticProperties.Hint="Back to main page"
+               Clicked="OnClickedHomeButton"
+               HorizontalOptions="Center"
+               BackgroundColor="MediumPurple"></Button>
+
+
+            <Grid ColumnDefinitions="25,*">
+
+                <Image Source="BlackCat.png"
+                   VerticalOptions="EndAndExpand"
+                   HorizontalOptions="StartAndExpand"
+                   Grid.Column="0"
+                   Margin="0,0,0,-100"
+                   HeightRequest="250"
+                   WidthRequest="250"/>
+
+                <Image Source="BlackCat.png"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="EndAndExpand"
+                    Grid.Column="1"
+                    Margin="0,0,0,-50"
+                    HeightRequest="250"
+                    WidthRequest="250"/>
+            </Grid>
+        </VerticalStackLayout>
+      
+
+    </ScrollView>
+    
+</ContentPage>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AllAboutCatsApp.Views.CatImagePage"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="Watercolor 1.jpg">
+    <ScrollView>
+    <VerticalStackLayout Padding="30" Spacing="25">
+            <ListView ItemsSource="{Binding TheImages}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell> 
+                            <StackLayout Padding="10" >
+                                <Image Source="{Binding url}" WidthRequest="700" HeightRequest="700" VerticalOptions="Center" HorizontalOptions="Center"/>
+                               
+                            </StackLayout>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button
+                Text="Get new image"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                BackgroundColor="DeepPink"
+                Clicked="OnGetNewImageClicked"></Button>
+            <Button
+               x:Name="HomeButton"
+               Text="Home" 
+               SemanticProperties.Hint="Back to main page"
+               Clicked="OnClickedHomeButton"
+               HorizontalOptions="Center"
+              BackgroundColor="MediumPurple"></Button>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AllAboutCatsApp.Views.SignInPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="Watercolor 1.jpg">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" IsEnabled="False"/>
+    </Shell.BackButtonBehavior>
+
+    <ScrollView>
+    <VerticalStackLayout
+        Spacing="30"
+        Padding="30,0"
+        VerticalOptions="Center">
+
+        <Label
+            x:Name="SignIn"
+            Text="Sign in"
+            Style="{StaticResource Headline}"
+            VerticalOptions="Start"
+            BackgroundColor="Gold"></Label>
+        <Frame>
+            <Grid ColumnDefinitions="25,*">
+                <Image Source="user.png" HeightRequest="25" WidthRequest="25"/>
+                <Entry
+                    x:Name="FullnameSignInEntry"
+                    Placeholder="Fullname"
+                    Grid.Column="1"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="StartAndExpand"></Entry>
+            </Grid>
+        </Frame>
+        
+        <Frame>
+            <Grid ColumnDefinitions="25,*">
+                <Image Source="password.png" HeightRequest="25" WidthRequest="25"/>
+                <Entry
+            x:Name="PasswordSignInEntry"
+            Placeholder="Password"
+             Grid.Column="1"       
+            VerticalOptions="StartAndExpand"
+            HorizontalOptions="StartAndExpand"></Entry>
+            </Grid>
+        </Frame>
+
+       
+        <Button
+           x:Name="SaveSignInButton"
+           Text="Sign In" 
+           SemanticProperties.Hint="Insert user from MongoDb"
+           Clicked="OnClickedSignIn"
+           HorizontalOptions="Start"
+            BackgroundColor="DeepPink"></Button>
+    
+            
+        
+
+       
+            <Button
+              x:Name="HomeButton"
+              Text="Home" 
+              SemanticProperties.Hint="Back to main page"
+              Clicked="OnClickedHomeButton"
+              HorizontalOptions="Center"></Button>
+
+            <Grid ColumnDefinitions="25,*">
+        
+            <Image Source="BlackCat.png"
+                   VerticalOptions="EndAndExpand"
+                   HorizontalOptions="StartAndExpand"
+                   Grid.Column="0"
+                   Margin="0,0,0,-100"
+                   HeightRequest="250"
+                   WidthRequest="250"/>
+
+            <Image Source="BlackCat.png"
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="EndAndExpand"
+                Grid.Column="1"
+                Margin="0,0,0,-50"
+                HeightRequest="250"
+                WidthRequest="250"/>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
